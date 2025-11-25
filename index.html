@@ -10,14 +10,14 @@
 
 
 <script type="module">
-  import { initSmoothScroll } from 'https://alexandre-maignan.github.io/tools/smooth-scroll.js';
+  import { initSmoothScroll } from 'https://alexandre-maignan.github.io/tools/smoothScroll.js';
 
   initSmoothScroll({
-    DEBUG: true,             // affiche les logs dans la console
-    ease: 0.08,              // vitesse du scroll
-    scrollMult: 1.2,         // intensité du scroll
-    MOBILE_BREAKPOINT: 768,  // désactive le scroll sur mobile
-    
+    DEBUG: true,
+    ease: 0.08,
+    scrollMult: 1.2,
+    MOBILE_BREAKPOINT: 768,
+    offset: 100
   });
 </script>
 
@@ -579,6 +579,7 @@ main.container {
 
 </body>
 </html>
+
 
 
 
