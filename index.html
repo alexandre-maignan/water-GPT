@@ -565,35 +565,26 @@ main.container {
 
 
 
+<script type="module">
+  import { SmoothScroll } from './smooth-scroll.js'; // chemin relatif vers ton smooth-scroll.js
 
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/gh/alexandre-maignan/tools/smooth-scroll.js" defer></script>
-
-<script>
-  // placé après, ou grâce au defer le script a été chargé avant DOMContentLoaded
+  // Initialisation du scroll lisse
   SmoothScroll.init({
-    DEBUG: true,
-    ease: 0.12,
-    scrollMult: 1.2
+    DEBUG: true,           // active les logs dans la console
+    ease: 0.12,            // facteur de lissage
+    scrollMult: 1.2,       // vitesse du scroll par molette
+    MOBILE_BREAKPOINT: 0   // 0 = forcer l'activation sur toutes tailles d'écran
   });
 </script>
 
 
 
 
+  
+
 </body>
 </html>
+
 
 
 
