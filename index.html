@@ -571,19 +571,15 @@ main.container {
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/alexandre-maignan/stools/smoothScroll.js"></script>
-<script>
-    initSmoothScroll({
-        DEBUG: false,
-        ease: 0.12,
-        scrollMult: 1.2
-    });
+<script type="module">
+import initSmoothScroll from "https://cdn.jsdelivr.net/gh/alexandre-maignan/tools/smooth-scroll.js";
+
+initSmoothScroll({
+    ease: 0.12,
+    scrollMult: 1.2,
+    offset: 0
+});
 </script>
-
-
-
-
-
 
 
 
@@ -594,6 +590,7 @@ main.container {
 
 </body>
 </html>
+
 
 
 
