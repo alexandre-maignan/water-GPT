@@ -9,8 +9,6 @@
 
 
 
-
-
   
 <style>
   /* Reset et typographie */
@@ -27,7 +25,7 @@
   }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
   @keyframes gradientMove {
@@ -326,7 +324,31 @@ main.container {
 
 
 
+.iframe-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f6f4;
+}
 
+.iframe-section h2 {
+    font-size: 2.2rem;
+    color: #2d5016;
+    margin-bottom: 40px;
+}
+
+.iframe-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
 
 
 
@@ -345,10 +367,9 @@ main.container {
   <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
   <div class="nav-links">
     <a href="#compteur">Compteur</a>
+    <a href="#projet">Projet</a>
     <a href="#explications">Explications</a>
-    <a href="#motivations">Motivations</a>
-    <a href="#about">À-propos</a>
-    <a href="#footer">Contact</a>
+    <a href="#sources">Sources</a>
   </div>
 </nav>
 
@@ -409,10 +430,20 @@ main.container {
 
 
 <section class="wave-background">
-  <div class="explanation">
+  <div class="explanation" id="projet">
     <h2>Pourquoi parler d'eau et d'IA ?</h2>
     <p>
-      Les centres de données qui alimentent l’intelligence artificielle consomment énormément d’énergie et génenrent des surchauffes de composants éléctroniques. Pour se refroidir, ces infrastructures utilisent de grandes quantités d’eau. Ainsi, une simple requête sur ChatGPT consomme de l'eau. 
+      Près de 2,5 milliards de requêtes sont soumises au chatbot chaque jour. Avec l’utilisation croissante de l’IA dans notre quotidien et dans le monde professionnel, il est pertinent de se poser la question sur leur impact environnemental et notamment leur empreinte hydrique.
+    </p>
+        <p>
+      En effet, ces chatbots utilisent des centres de données et serveurs qui génèrent de la chaleur. Il est donc nécessaire de prélever de l’eau douce afin de refroidir ces infrastructures et d’assurer leur fonctionnement.
+    </p>
+<p>
+    Une partie de cette eau prélevée est restituée au milieu naturel, mais l’autre partie est dite « consommée » car évaporée pendant le processus. Ainsi, cela peut avoir un impact direct sur le cycle hydrologique local et peut accentuer la pression sur la ressource en eau et le stress hydrique.
+    </p>
+
+    <p>
+      Face à toutes ces problématiques, j’ai développé un modèle permettant d’estimer la consommation en eau liée à l’utilisation de Ce compteur de consommation d’eau à été créé pour permettre de sensibiliser et de rendre compte des ressources nécessaires au fonctionnement de l’IA et d’encourager une utilisation plus modérée de ces outils.
     </p>
   </div>
  
@@ -420,8 +451,8 @@ main.container {
 <section class="explanation" id="explications">
   <h2>Comment est calculée cette consommation ?</h2>
   <p>
-    Nous estimons la consommation d’eau de ChatGPT en multipliant le nombre de requêtes traitées depuis son lancement par le volume moyen d’eau utilisé par requête. 
-    Les chiffres sont ensuite convertis en litres et en équivalent piscines olympiques pour une meilleure visualisation l'ampleur de la consommation.
+    J'ai éstimé la consommation d’eau de ChatGPT en multipliant le nombre de requêtes traitées depuis son lancement par le volume moyen d’eau consommé par requête. 
+    Les chiffres sont ensuite convertis en litres et en équivalent piscines olympiques.
   </p>
   <p>
     <strong>Hypothèses :</strong> <br>
@@ -434,24 +465,24 @@ main.container {
   </p>
 </section>
 
-    <section class="explanation" id="motivations">
-      <h2>Motivations</h2>
-      <p>
-        L’intérêt de cette initiative est de rendre visible une consommation souvent invisible : l’eau utilisée par les technologies numériques. En traduisant des chiffres abstraits en litres et en équivalents concrets, comme des piscines olympiques, ce compteur permet de mieux comprendre l’impact environnemental réel de l’intelligence artificielle. L’objectif n’est pas seulement d’informer, mais aussi de sensibiliser aux enjeux de durabilité et d’encourager l’innovation vers des solutions plus sobres et responsables.
-      </p>
-    </section>
-
-    <section class="explanation" id="about">
-      <h2>À propos de moi</h2>
-      <p>
-        Je suis Alexandre Maignan et je suis étudiant à l’ENGEES (École Nationale du Génie de l’Eau et de l’Environnement de Strasbourg). Passionné par les enjeux environnementaux et les impacts du numérique sur nos ressources, j’ai créé ce projet pour sensibiliser de manière accessible et visuelle à la consommation d’eau liée à l’intelligence artificielle. Mon objectif est de contribuer à une meilleure compréhension des défis de durabilité et de promouvoir des pratiques technologiques plus responsables.
-      </p>
-    </section>
 
 
 
+<section class="explanation" id="sources">
+  <h2>Sources</h2>
+  <p>
+    Voici les différentes sources qui m'ont permis d'élaborer ce modèle de consommation en eau :
+  </p>
+  <p>
+    • <a href="https://www.axios.com/2025/07/21/sam-altman-openai-trump-dc-fed" target="_blank" rel="noopener noreferrer">Altman plans D.C. push to "democratize" AI economic benefits, Axios</a> <br>
+    • <a href="https://arxiv.org/abs/2304.03271" target="_blank" rel="noopener noreferrer">Making AI Less "Thirsty", 2023</a> <br>
+    • <a href="https://www.lesnumeriques.com/societe-numerique/le-chiffre-une-requete-chatgpt-consomme-t-elle-vraiment-500-ml-d-eau-n226831.html" target="_blank" rel="noopener noreferrer">Le chiffre : une requête ChatGPT consomme-t-elle vraiment 500 ml d’eau ?, Les Numériques</a> <br>
+    • <a href="https://www.bfmtv.com/tech/intelligence-artificielle/chaque-jour-chat-gpt-repond-a-2-5-milliards-de-requetes_AV-202507220431.html#:~:text=Un%20nombre%20qui%20laisse%20entendre,'utilisateurs%20aux%20%C3%89tats%2DUnis." target="_blank" rel="noopener noreferrer">Chaque jour, ChatGPT répond à 2,5 milliards de requêtes, BFMTV</a> <br>
+  </p>
 
 </section>
+
+
 
   </main>
 
@@ -460,11 +491,9 @@ main.container {
     <p>© <span id="currentYear"></span> ChatGPT Water Tracker.</p>
     <p>
       Retrouvez-moi sur :
-      <a href="https://twitter.com/toncompte" target="_blank" rel="noopener noreferrer">Twitter</a> |
-      <a href="https://www.linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="https://github.com/toncompte" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/amaignan/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://github.com/alexandre-maignan" target="_blank" rel="noopener noreferrer">GitHub</a>
     </p>
-    <p><a href="#">Sources et méthodologie</a></p>
   </footer>
 
 <script>
@@ -521,18 +550,9 @@ main.container {
 </script>
 
 
-<script>
-  // Sélectionne tous les liens de la navbar qui pointent vers des ancres
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault(); // empêche le comportement par défaut
-      const target = document.querySelector(this.getAttribute('href')); // cible de l'ancre
-      const offset = 100; // hauteur de la navbar
-      const topPos = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: topPos, behavior: 'smooth' }); // scroll fluide
-    });
-  });
-</script>
+
+
+
 
 
 
@@ -579,25 +599,204 @@ main.container {
 
 
 
-  <script type="module">
-import initSmoothScroll from "https://cdn.jsdelivr.net/gh/alexandre-maignan/tools/smooth-scroll.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function initSmoothScroll(options = {}) {
+    const SmoothConfig = {
+        DEBUG: false,
+        MOBILE_BREAKPOINT: 768,
+        ease: 0.03,
+        scrollMult: 1,
+        stopThreshold: 0.1,
+        minPageHeightRatio: 1.05,
+        ...options
+    };
+
+    let smoothEnabled = false;
+    let current = 0;
+    let target = 0;
+    let rafId = null;
+
+    const clamp = (v, min, max) => Math.max(min, Math.min(v, max));
+    const log = (...args) => { if (SmoothConfig.DEBUG) console.log('[smooth]', ...args); };
+
+    function updateScrollBehavior() {
+        if (window.innerWidth < SmoothConfig.MOBILE_BREAKPOINT) {
+            document.documentElement.style.scrollBehavior = "";
+            document.body.style.scrollBehavior = "";
+        } else {
+            document.documentElement.style.scrollBehavior = "auto";
+            document.body.style.scrollBehavior = "auto";
+        }
+    }
+
+    function enableSmooth() {
+        if (smoothEnabled) return;
+        smoothEnabled = true;
+        current = window.scrollY;
+        target = window.scrollY;
+        window.addEventListener('wheel', onWheel, { passive: false });
+        window.addEventListener('scroll', onNativeScroll, { passive: true });
+        log('Smooth enabled');
+    }
+
+    function disableSmooth() {
+        if (!smoothEnabled) return;
+        smoothEnabled = false;
+        window.removeEventListener('wheel', onWheel);
+        window.removeEventListener('scroll', onNativeScroll);
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        log('Smooth disabled');
+    }
+
+    // Gestion de la molette
+    function onWheel(e) {
+        if (!smoothEnabled) return;
+        if (e.ctrlKey) return;
+        e.preventDefault();
+
+        const maxScroll = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+        ) - window.innerHeight;
+
+        target = clamp(target + e.deltaY * SmoothConfig.scrollMult, 0, maxScroll);
+
+        if (!rafId) render();
+    }
+
+    function onNativeScroll() {
+        if (!rafId) {
+            target = current = window.scrollY;
+        }
+    }
+
+    // Stop smooth scroll avec touches clavier
+    window.addEventListener("keydown", (e) => {
+        const keys = [
+            "ArrowUp", "ArrowDown",
+            "PageUp", "PageDown",
+            "Home", "End",
+            "Space"
+        ];
+
+        if (!keys.includes(e.code)) return;
+
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+
+        current = target = window.scrollY;
+    });
+
+    function render() {
+        if (!smoothEnabled) return;
+
+        const diff = target - current;
+
+        if (Math.abs(diff) < SmoothConfig.stopThreshold) {
+            current = target;
+            rafId = null;
+            return;
+        }
+
+        current += diff * SmoothConfig.ease;
+        window.scrollTo({ top: Math.round(current), behavior: "auto" });
+
+        rafId = requestAnimationFrame(render);
+    }
+
+    function checkDevice() {
+        const pageHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+        );
+
+        if (pageHeight <= window.innerHeight * SmoothConfig.minPageHeightRatio) {
+            disableSmooth();
+            return false;
+        }
+        if (window.innerWidth < SmoothConfig.MOBILE_BREAKPOINT) {
+            disableSmooth();
+            return false;
+        }
+        enableSmooth();
+        return true;
+    }
+
+    updateScrollBehavior();
+    checkDevice();
+
+    window.addEventListener("resize", () => {
+        clearTimeout(window.__smooth_resize_timer);
+        window.__smooth_resize_timer = setTimeout(() => {
+            updateScrollBehavior();
+            checkDevice();
+        }, 120);
+    });
+
+    // Smooth scroll pour liens internes
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            const targetEl = document.querySelector(targetId);
+            if (!targetEl) return;
+
+            if (window.innerWidth < SmoothConfig.MOBILE_BREAKPOINT) return;
+
+            e.preventDefault();
+
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = null;
+
+            current = target = window.scrollY;
+            target = targetEl.getBoundingClientRect().top + window.scrollY;
+
+            if (!rafId) render();
+        });
+    });
+}
 
 initSmoothScroll({
-    ease: 0.1,             // vitesse du lissage du scroll (plus haut = plus rapide)
-    scrollMult: 1,         // intensité de la molette (1 = normal)
-
-    MOBILE_BREAKPOINT: 768,     // désactive le script sous 768px (mobile)
-    minPageHeightRatio: 1.05,   // désactive si page trop petite
-
-    DEBUG: false,               // active les logs console si besoin
+    DEBUG: false,
+    ease: 0.06,
+    scrollMult: 1.2
 });
 </script>
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
+
+
+
+
+
 
 
 
